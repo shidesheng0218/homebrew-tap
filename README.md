@@ -6,15 +6,18 @@ DeepSeek Code 的 Homebrew 分发渠道。
 
 ```bash
 brew tap shidesheng0218/tap
+brew trust shidesheng0218/tap
 brew install --cask deepseek-code
 ```
 
 一行版本：
 
 ```bash
+brew trust shidesheng0218/tap
 brew install --cask shidesheng0218/tap/deepseek-code
 ```
 
+新版 Homebrew 对第三方 tap 的 Cask 要求显式 `brew trust`（一次即可）。
 Homebrew 安装时会自动剥离 quarantine 属性，首次打开双击即可，
 不需要右键绕过 Gatekeeper。
 
