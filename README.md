@@ -18,8 +18,16 @@ brew install --cask shidesheng0218/tap/deepseek-code
 ```
 
 新版 Homebrew 对第三方 tap 的 Cask 要求显式 `brew trust`（一次即可）。
-Homebrew 安装时会自动剥离 quarantine 属性，首次打开双击即可，
-不需要右键绕过 Gatekeeper。
+
+**注意**：Homebrew 6 起不再为 Cask 处理 quarantine 属性。本应用是
+adhoc 签名的社区构建，首次启动前需要执行一次（二选一）：
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/DeepSeek Code.app"
+```
+
+或在 Finder 中右键 App 选择"打开"。只需一次，之后双击即用，
+自动更新与 brew 升级均不受影响。
 
 ## 升级
 
